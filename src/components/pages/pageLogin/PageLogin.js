@@ -1,6 +1,7 @@
 import AuthorizationErrorMessage from '../../authorizationErrorMessage/AuthorizationErrorMessage';
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './pageLogin.scss';
 
@@ -12,6 +13,8 @@ const PageLogin = () => {
     const [loadingDataServer, setLoadingDataServer] = useState(false);
     const [dataServer, setDataServer] = useState('');
 
+    const navigate = useNavigate();
+    const goProfile = () => navigate('/profile', {replase: true});
 
     const { 
         register, 
@@ -29,12 +32,20 @@ const PageLogin = () => {
 
 
     const onSubmit = (data) => {
-        setDataForm(data); // объект записался в state 
-        setLoadingDataServer(true); // вкл загрузку данных от сервера
+        setDataForm(data);
+        setLoadingDataServer(true);
         getData()
             .then(data => setDataServer(data))
             .then(() => setLoadingDataServer(false))
             .catch(err => console.log(err))
+    }
+
+
+    // авторизация и перенаправление
+    if (loadingDataServer === false && dataForm.login === dataServer) {
+        localStorage.setItem("authorization", "true");
+        localStorage.setItem("authorizedUser", dataForm.login);
+        goProfile();
     }
 
 
