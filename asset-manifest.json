@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/authorization-form/static/css/main.2634f232.css",
-    "main.js": "/authorization-form/static/js/main.82171b86.js",
+    "main.js": "/authorization-form/static/js/main.c76cc91b.js",
     "static/js/787.807dd1d0.chunk.js": "/authorization-form/static/js/787.807dd1d0.chunk.js",
     "index.html": "/authorization-form/index.html",
     "static/media/exclamation-mark.svg": "/authorization-form/static/media/exclamation-mark.60f1e271cf8e4fc065fc59d7c494ed1e.svg",
     "main.2634f232.css.map": "/authorization-form/static/css/main.2634f232.css.map",
-    "main.82171b86.js.map": "/authorization-form/static/js/main.82171b86.js.map",
+    "main.c76cc91b.js.map": "/authorization-form/static/js/main.c76cc91b.js.map",
     "787.807dd1d0.chunk.js.map": "/authorization-form/static/js/787.807dd1d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2634f232.css",
-    "static/js/main.82171b86.js"
+    "static/js/main.c76cc91b.js"
   ]
 }
