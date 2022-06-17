@@ -1,0 +1,18 @@
+.profile {
+    text-align: center;
+
+    &__text {
+        font-size: 40px;
+        word-wrap: break-word;
+        margin-bottom: 50px;
+    }
+
+    &__button {
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 19px 71px;
+        background: #F5F5F5;
+        border-radius: 8px;
+    }
+}
