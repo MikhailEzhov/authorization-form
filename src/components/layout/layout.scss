@@ -1,0 +1,12 @@
+.layout {
+    &__header {
+        padding: 40px 0 7% 0;
+        text-align: center;
+
+        &_title {
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 78px;
+        }
+    }
+}

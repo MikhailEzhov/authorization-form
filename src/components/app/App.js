@@ -1,24 +1,27 @@
+import Layout from '../layout/Layout';
 import PageLogin from '../pages/pageLogin/PageLogin'
-
-import './app.scss';
+import PageProfile from '../pages/pageProfile/PageProfile'
+import PrivateRoute from '../privateRoute/PrivateRoute'
+import { BrowserRouter, Routes,Route,} from "react-router-dom";
 
 
 
 const App = () => {
     return (
-        <div className="app">
-
-            <header className="header">
-                <h1 className="header__title">ONLY.</h1>
-            </header>
-
-            <main>
-                <PageLogin/>
-            </main>
-
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<PageLogin />} />
+                    <Route path="/login" element={<PageLogin />} />
+                    <Route path="/profile" element={
+                        <PrivateRoute>
+                            <PageProfile />
+                        </PrivateRoute>
+                    } />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     )
-
 }
 
 export default App;
