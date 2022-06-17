@@ -10,7 +10,7 @@ function PageProfile() {
         <div className="container">
             <div className="profile">
                 <p className="profile__text">Здравствуйте, <strong>{localStorage.getItem('authorizedUser')}</strong></p>
-                <Link to="/login" onClick={() => localStorage.clear()} className="profile__button">ВЫХОД</Link>
+                <Link to="/authorization-form/login" onClick={() => localStorage.clear()} className="profile__button">ВЫХОД</Link>
             </div>
         </div>
     )

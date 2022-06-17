@@ -10,7 +10,7 @@ const PrivateRoute = ({children}) => {
 
     // нет авторизации:
     if (!authorization) {
-        return <Navigate to='/login' state={{from: location}}/>
+        return <Navigate to='/authorization-form/login' state={{from: location}}/>
     }
 
     // есть авторизация:

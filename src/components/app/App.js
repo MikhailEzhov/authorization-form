@@ -10,10 +10,10 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout />}>
+                <Route path="/authorization-form" element={<Layout />}>
                     <Route index element={<PageLogin />} />
-                    <Route path="/login" element={<PageLogin />} />
-                    <Route path="/profile" element={
+                    <Route path="/authorization-form/login" element={<PageLogin />} />
+                    <Route path="/authorization-form/profile" element={
                         <PrivateRoute>
                             <PageProfile />
                         </PrivateRoute>

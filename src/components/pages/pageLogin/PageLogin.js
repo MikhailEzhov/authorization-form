@@ -14,7 +14,7 @@ const PageLogin = () => {
     const [dataServer, setDataServer] = useState('');
 
     const navigate = useNavigate();
-    const goProfile = () => navigate('/profile', {replase: true});
+    const goProfile = () => navigate('/authorization-form/profile', {replase: true});
 
     const { 
         register, 
