@@ -40,5 +40,9 @@
         color: #FFFFFF;
         font-weight: 700;
         font-size: 18px;
+
+        &_disabled {
+            background: #99A9FF;
+        }
     }
 }

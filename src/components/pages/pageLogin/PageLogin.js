@@ -78,7 +78,12 @@ const PageLogin = () => {
                     <label htmlFor="checkbox">Запомнить пароль</label>
                 </div>
                 
-                <input className="form__button" type="submit" value="Войти"/>
+                <input 
+                    type="submit"
+                    value="Войти"
+                    className={loadingDataServer ? 'form__button form__button_disabled' : 'form__button'}
+                    disabled={loadingDataServer}
+                />
             </form>
         </div>
     )
